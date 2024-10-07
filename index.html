@@ -15,31 +15,46 @@
 
   <body>
     <main class="main__container">
-        <img src="img/bag.png" alt="sacola de compras" />
+      <img src="img/bag.png" alt="sacola de compras" />
       <form>
-        <input id="input-item" type="text" placeholder="Digite o item que deseja adicionar" />
+        <input
+          id="input-item"
+          type="text"
+          placeholder="Digite o item que deseja adicionar"
+        />
         <button class="main__container__save-button">Salvar item</button>
       </form>
 
       <ul>
         <h2>Lista de compras</h2>
-      <hr />
+        <hr />
         <li>
           <div class="main__container__item__lista-container">
             <div class="main__container__item__lista-container__nome-compra">
-              <input type="checkbox" />
+              <div class="main__container__item__checkbox">
+                <label for="checkbox-1">
+                  <input
+                    type="checkbox"
+                    class="checkbox-input"
+                    id="checkbox-1"
+                  />
+                  <div class="checkbox-customizado checked"></div>
+                </label>
+              </div>
               <p>Ração de gato</p>
             </div>
             <div>
-              <button>
+              <button class="main__container__item--botao-acao">
                 <img src="img/delete.svg" alt="ìcone deletar" />
               </button>
-              <button>
+              <button class="main__container__item--botao-acao">
                 <img src="img/edit.svg" alt="ìcone editar" />
               </button>
             </div>
           </div>
-          <p class="main__container__item-texto">Segunda-feira (31/01/2022) às 08:30</p>
+          <p class="main__container__item-texto">
+            Segunda-feira (31/01/2022) às 08:30
+          </p>
         </li>
       </ul>
     </main>
