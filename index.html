@@ -22,16 +22,18 @@
           type="text"
           placeholder="Digite o item que deseja adicionar"
         />
-        <button class="main__container__save-button">Salvar item</button>
+        <button class="main__container__save-button" id="adicionar-item">
+          Salvar item
+        </button>
       </form>
 
-      <ul>
+      <ul id="lista-de-compras">
         <h2>Lista de compras</h2>
         <hr />
         <li>
           <div class="main__container__item__lista-container">
             <div class="main__container__item__lista-container__nome-compra">
-              <div class="main__container__item__checkbox">
+              <div class="main__container__item__lista-container__nome-compra__checkbox">
                 <label for="checkbox-1">
                   <input
                     type="checkbox"
@@ -40,23 +42,26 @@
                   />
                   <div class="checkbox-customizado checked"></div>
                 </label>
+                <p>Ração de gato</p>
               </div>
-              <p>Ração de gato</p>
+              
+
+              <div>
+                <button class="main__container__item--botao-acao">
+                  <img src="img/delete.svg" alt="ìcone deletar" />
+                </button>
+                <button class="main__container__item--botao-acao">
+                  <img src="img/edit.svg" alt="ìcone editar" />
+                </button>
+              </div>
             </div>
-            <div>
-              <button class="main__container__item--botao-acao">
-                <img src="img/delete.svg" alt="ìcone deletar" />
-              </button>
-              <button class="main__container__item--botao-acao">
-                <img src="img/edit.svg" alt="ìcone editar" />
-              </button>
-            </div>
+            <p class="main__container__item__lista-container__nome-compra__item-texto">
+              Segunda-feira (31/01/2022) às 08:30
+            </p>
           </div>
-          <p class="main__container__item-texto">
-            Segunda-feira (31/01/2022) às 08:30
-          </p>
         </li>
       </ul>
     </main>
+    <script src="scripts.js"></script>
   </body>
 </html>

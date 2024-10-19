@@ -99,15 +99,22 @@ ul{
 
 .main__container__item__lista-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
 .main__container__item__lista-container__nome-compra{
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.main__container__item-texto{
+.main__container__item__lista-container__nome-compra__checkbox{
+  display: flex;
+}
+
+.main__container__item__lista-container__nome-compra__item-texto{
   font-size: 12px;
   line-height: 20px;
 
