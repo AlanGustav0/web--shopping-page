@@ -2,7 +2,13 @@ const item = document.getElementById("input-item");
 const botaoSalvarItem = document.getElementById("adicionar-item");
 const listaDeCompras = document.getElementById("lista-de-compras");
 
+
 botaoSalvarItem.addEventListener("click",adicionarItem);
+
+
+function adicionaCheckbox(){
+    
+}
 
 function adicionarItem(evento){
     evento.preventDefault();
@@ -15,10 +21,37 @@ function adicionarItem(evento){
     containerNomeCompra.classList.add("main__container__item__lista-container__nome-compra");
 
     containerNomeDoItem.appendChild(containerNomeCompra);
+
+    // checkbox
+    let contadorCheckbox = 1;
+
+    const containerCheckBox = document.createElement("div");
+    containerCheckBox.classList.add("main__container__item__lista-container__nome-compra__checkbox");
+    const checkBoxInput = document.createElement("input");
+    checkBoxInput.type = "checkbox";
+
+    checkBoxInput.classList.add("checkbox-input");
+    checkBoxInput.id = `checkbox-${contadorCheckbox++}`
+
+    const checkBoxLabel = document.createElement("label");
+    checkBoxLabel.setAttribute("for",checkBoxInput.id);
+
+    const checkBoxCustomizado = document.createElement("div");
+    checkBoxCustomizado.classList.add("checkbox-customizado");
+    checkBoxLabel.appendChild(checkBoxInput);
+    checkBoxLabel.appendChild(checkBoxCustomizado);
+
+    containerCheckBox.appendChild(checkBoxLabel);
+    
+
+    // end checkbox
+    
     const nomeDoItem = document.createElement("p");
 
     nomeDoItem.innerHTML = item.value;
-    containerNomeCompra.appendChild(nomeDoItem);
+    containerCheckBox.appendChild(nomeDoItem);
+    containerNomeCompra.appendChild(containerCheckBox);
+    
 
     const containerBotoes = document.createElement("div");
     const botaoRemover = document.createElement("button");
@@ -43,9 +76,13 @@ function adicionarItem(evento){
 
     containerItemLista.appendChild(containerNomeDoItem);
     containerNomeCompra.appendChild(containerBotoes);
+
     containerItemLista.appendChild(containerNomeCompra);
     
     itemDaLista.appendChild(containerItemLista);
 
     listaDeCompras.append(itemDaLista); 
 }
+
+
+
