@@ -27,44 +27,16 @@
         </button>
       </form>
 
+      <h2>Lista de compras</h2>
+      <hr />
       <ul id="lista-de-compras">
-        <h2>Lista de compras</h2>
-        <hr />
-        <li>
-          <div class="main__container__item__lista-container">
-            <div class="main__container__item__lista-container__nome-compra">
-              <div class="main__container__item__lista-container__nome-compra__checkbox">
-                <label for="checkbox-1">
-                  <input
-                    type="checkbox"
-                    class="checkbox-input"
-                    id="checkbox-1"
-                  />
-                  <div class="checkbox-customizado checked"></div>
-                </label>
-                <p>Ração de gato</p>
-              </div>
-              
-
-              <div>
-                <button class="main__container__item--botao-acao">
-                  <img src="img/delete.svg" alt="ìcone deletar" />
-                </button>
-                <button class="main__container__item--botao-acao">
-                  <img src="img/edit.svg" alt="ìcone editar" />
-                </button>
-              </div>
-            </div>
-            <p class="main__container__item__lista-container__nome-compra__item-texto">
-              Segunda-feira (31/01/2022) às 08:30
-            </p>
-          </div>
-        </li>
+        <p id="mensagem-lista-vazia" style="display:block">Sua lista está vazia. Adicione itens a ela para não esquecer nada na próxima compra!</p>
       </ul>
+
       <h2>Comprado</h2>
       <hr />
       <ul id="lista-comprados"></ul>
     </main>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" type="module"></script>
   </body>
 </html>
