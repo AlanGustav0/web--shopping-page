@@ -1,3 +1,7 @@
+import { editarItem } from "./editarItem.js";
+import { excluirItem } from "./excluirItem.js";
+import { verificarListaComprados } from "./verificarListaComprados.js";
+
 let contadorCheckbox = 2;
 const listaComprados = document.getElementById("lista-comprados");
 const listaDeCompras = document.getElementById("lista-de-compras");
@@ -48,8 +52,11 @@ export function criarItemDaLista(item){
       checkboxCustomizado.classList.remove("checked");
       itemTitulo.style.textDecoration = "none";
       listaDeCompras.appendChild(itemDaLista);
+      
     }
   });
+
+  verificarListaComprados(listaComprados);
 
   const checkBoxCustomizado = document.createElement("div");
   checkBoxCustomizado.classList.add("checkbox-customizado");
@@ -78,9 +85,17 @@ export function criarItemDaLista(item){
   imagemRemover.src = "img/delete.svg";
   imagemRemover.alt = "ìcone deletar";
 
+  botaoRemover.addEventListener("click",function() {
+    excluirItem(itemDaLista);
+  });
+
   const imagemEditar = document.createElement("img");
   imagemEditar.src = "img/edit.svg";
   imagemEditar.alt = "ícone editar";
+
+  botaoEditar.addEventListener("click", function() {
+    editarItem(itemDaLista);
+  })
 
   botaoRemover.appendChild(imagemRemover);
   botaoEditar.appendChild(imagemEditar);
