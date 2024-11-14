@@ -1,6 +1,7 @@
 import { editarItem } from "./editarItem.js";
 import { excluirItem } from "./excluirItem.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
+import { verificarListaVazia } from "./verificarListaVazia.js";
 
 let contadorCheckbox = 2;
 const listaComprados = document.getElementById("lista-comprados");
@@ -48,15 +49,16 @@ export function criarItemDaLista(item){
       checkboxCustomizado.classList.add("checked");
       itemTitulo.style.textDecoration = "line-through";
       listaComprados.appendChild(itemDaLista);
+      verificarListaComprados(listaComprados);
     } else {
       checkboxCustomizado.classList.remove("checked");
       itemTitulo.style.textDecoration = "none";
       listaDeCompras.appendChild(itemDaLista);
-      
+      verificarListaVazia(listaDeCompras);
     }
   });
 
-  verificarListaComprados(listaComprados);
+  
 
   const checkBoxCustomizado = document.createElement("div");
   checkBoxCustomizado.classList.add("checkbox-customizado");

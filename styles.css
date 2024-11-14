@@ -43,6 +43,7 @@ ul{
   border-radius: 16px;
   text-align: center;
   padding: 56px;
+  max-width: 450px;
 }
 
 .main__container h2 {
